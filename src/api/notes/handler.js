@@ -87,7 +87,8 @@ class NotesHandler {
     const { id: credentialId } = request.auth.credentials;
 
     await this._service.verifyNoteAccess(id, credentialId);
-    await this._service.editNoteById(id, request.payload);
+    this._service.editNoteById(id, request.payload);
+
     return {
       status: 'success',
       message: 'Catatan berhasil diperbarui',
