@@ -2,3 +2,4 @@ node_modules
 DicodingNotesApp.pem
 .env
 .prod.env
+src/api/uploads/file

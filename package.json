@@ -7,6 +7,7 @@
     "start:prod": "NODE_ENV=production node ./src/server.js",
     "start:dev": "nodemon ./src/server.js",
     "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
     "migrate": "node-pg-migrate"
   },
   "keywords": [],
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "@hapi/hapi": "^21.3.2",
+    "@hapi/inert": "^7.1.0",
     "@hapi/jwt": "^3.2.0",
     "amqplib": "^0.10.8",
     "bcrypt": "^6.0.0",
