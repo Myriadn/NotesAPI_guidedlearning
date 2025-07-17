@@ -6,6 +6,7 @@ class UploadsHandler {
     this._validator = validator;
 
     this.postUploadImageHandler = this.postUploadImageHandler.bind(this);
+    // const fileLocation = await this._service.writeFile(data, data.hapi);
   }
 
   async postUploadImageHandler(request, h) {
@@ -18,6 +19,10 @@ class UploadsHandler {
       data: {
         fileLocation: `http://${process.env.HOST}:${process.env.PORT}/upload/images/${filename}`,
       },
+      // status: 'success',
+      // data: {
+      //   fileLocation: fileLocation,
+      // },
     });
     response.code(201);
     return response;
